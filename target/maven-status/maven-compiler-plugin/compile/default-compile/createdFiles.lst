@@ -1,0 +1,4 @@
+model\Task.class
+servlets\DeleteTaskServlet.class
+servlets\AddTaskServlet.class
+servlets\ToDoListServlet.class
