@@ -1,5 +1,6 @@
 package servlets;
 
+import model.Status;
 import model.Task;
 
 import javax.servlet.ServletException;
@@ -26,13 +27,9 @@ public class DeleteTaskServlet extends HttpServlet{
         }
         List<Task> myList = (List<Task>) session.getAttribute("myList");
 
-        if(req.getParameter("taskId")==""){
-            req.getRequestDispatcher("/index.jsp").forward(req, resp);
-        }
-        long id =  Long.parseLong(req.getParameter("taskId"));
         Iterator<Task> iterator = myList.iterator();
         while (iterator.hasNext()){
-            if(iterator.next().getId() == id){
+            if(iterator.next().getStatus().equals(Status.DONE)){
                 iterator.remove();
             }
         }

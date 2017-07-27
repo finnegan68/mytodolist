@@ -10,15 +10,6 @@
         </session-timeout>
     </session-config>
 
-    <servlet-mapping>
-        <servlet-name>ToDoListServlet</servlet-name>
-        <url-pattern>/todolist</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ToDoListServlet</servlet-name>
-        <servlet-class>servlets.ToDoListServlet</servlet-class>
-    </servlet>
 
     <servlet-mapping>
         <servlet-name>AddTaskServlet</servlet-name>
@@ -38,6 +29,16 @@
     <servlet>
         <servlet-name>DeleteTaskServlet</servlet-name>
         <servlet-class>servlets.DeleteTaskServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChangeStatusServlet</servlet-name>
+        <url-pattern>/changeStatus</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ChangeStatusServlet</servlet-name>
+        <servlet-class>servlets.ChangeStatusServlet</servlet-class>
     </servlet>
 
 </web-app>

@@ -4,13 +4,22 @@ public class Task {
 
     static long idCounter = 0;
 
-    long id;
-    String name;
-    String description;
+    private long id;
+    private String name;
+    private String description;
+    private Status status = Status.NOTDONE;
 
     public Task() {
         this.id = idCounter;
         idCounter += 1;
+    }
+
+    public static long getIdCounter() {
+        return idCounter;
+    }
+
+    public static void setIdCounter(long idCounter) {
+        Task.idCounter = idCounter;
     }
 
     public long getId() {
@@ -37,11 +46,21 @@ public class Task {
         this.description = description;
     }
 
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
+                ", status=" + status +
                 '}';
     }
 }

@@ -34,12 +34,7 @@ public class AddTaskServlet extends HttpServlet {
         myList.add(task);
         session.setAttribute("myList", myList);
 
-
-        //String url = "http://localhost:8080/example/index.jsp";
-        //resp.sendRedirect(url);
-
         req.getRequestDispatcher("/index.jsp").forward(req, resp);
 
-        System.out.println(session.getAttribute("myList").toString());
     }
 }

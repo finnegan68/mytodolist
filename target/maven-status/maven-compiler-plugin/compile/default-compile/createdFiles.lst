@@ -1,4 +1,6 @@
 model\Task.class
+servlets\ChangeStatusServlet.class
 servlets\DeleteTaskServlet.class
 servlets\AddTaskServlet.class
+model\Status.class
 servlets\ToDoListServlet.class
